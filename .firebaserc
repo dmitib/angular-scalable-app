@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-scalable-app": {
+      "hosting": {
+        "angular-scalable-app": [
+          "angular-scalable-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-scalable-app"
+  }
+}

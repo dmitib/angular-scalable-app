@@ -116,6 +116,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "angular-scalable-app:build:production",
+            "firebaseProject": "angular-scalable-app",
+            "firebaseHostingSite": "angular-scalable-app"
+          }
         }
       }
     }
