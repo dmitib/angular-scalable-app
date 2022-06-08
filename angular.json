@@ -63,7 +63,9 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "sourceMap": false
+              "sourceMap": false,
+              "buildOptimizer": true,
+              "optimization": true
             },
             "dev": {
               "fileReplacements": [
