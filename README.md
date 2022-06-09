@@ -63,3 +63,8 @@ In a module of a parent component you should declare those components which are 
 Shared mustn't be an all-in-one module if it consists of absolutely independent elements.
 Import only ComponentOne instead of all SharedModule.
 Each component included in SharedModule must have its own module.
+
+4.8
+Moving components to shared.
+The more distant the component is from the endpoint of use, the more abstract it should be.
+Avoid creating business logic components in shared.
