@@ -20,7 +20,8 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase.config),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

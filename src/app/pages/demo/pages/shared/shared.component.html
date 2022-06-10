@@ -18,9 +18,7 @@
     [isInline]="isInline"
     [patternError]="regexErrors.email"
   >
-    <app-input
-      formControlName="input"
-    ></app-input>
+    <app-input formControlName="input"></app-input>
   </app-form-field>
 
   <app-form-field
@@ -29,11 +27,16 @@
     [control]="$any(form.controls).password"
     [isInline]="isInline"
   >
-    <app-password
-      formControlName="password"
-    >
+    <app-password formControlName="password"></app-password>
+  </app-form-field>
 
-    </app-password>
+  <app-form-field
+    label="Select"
+    [required]="true"
+    [control]="$any(form.controls).select"
+    [isInline]="isInline"
+  >
+    <app-select formControlName="select" [items]="items"></app-select>
   </app-form-field>
 </form>
 
