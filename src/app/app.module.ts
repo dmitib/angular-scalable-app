@@ -8,6 +8,19 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HeaderComponent } from './components/header/header.component';
+import { MatDateFormats, MatNativeDateModule, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+
+const APP_DATE_FORMATS: MatDateFormats = {
+  parse: {
+    dateInput: { date: "numeric", month: "numeric", year: "numeric" }
+  },
+  display: {
+    dateInput: { date: "numeric", month: "short", year: "numeric" },
+    monthYearLabel: { year: "numeric", month: "short" },
+    dateA11yLabel: { year: "numeric", month: "long", day: "numeric" },
+    monthYearA11yLabel: { year: "numeric", month: "long" }
+  }
+};
 
 @NgModule({
   declarations: [
@@ -21,9 +34,13 @@ import { HeaderComponent } from './components/header/header.component';
     AngularFireModule.initializeApp(environment.firebase.config),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatNativeDateModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: "en-GB" },
+    { provide: MAT_DATE_FORMATS, useValue: APP_DATE_FORMATS }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
