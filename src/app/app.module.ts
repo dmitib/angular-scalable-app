@@ -12,10 +12,10 @@ import { MatDateFormats, MatNativeDateModule, MAT_DATE_FORMATS, MAT_DATE_LOCALE 
 
 const APP_DATE_FORMATS: MatDateFormats = {
   parse: {
-    dateInput: { date: "numeric", month: "numeric", year: "numeric" }
+    dateInput: { day: "numeric", month: "numeric", year: "numeric" }
   },
   display: {
-    dateInput: { date: "numeric", month: "short", year: "numeric" },
+    dateInput: { day: "numeric", month: "short", year: "numeric" },
     monthYearLabel: { year: "numeric", month: "short" },
     dateA11yLabel: { year: "numeric", month: "long", day: "numeric" },
     monthYearA11yLabel: { year: "numeric", month: "long" }
