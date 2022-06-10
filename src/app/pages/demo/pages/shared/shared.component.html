@@ -16,6 +16,7 @@
     [required]="true"
     [control]="$any(form.controls).input"
     [isInline]="isInline"
+    [patternError]="regexErrors.email"
   >
     <app-input
       formControlName="input"
