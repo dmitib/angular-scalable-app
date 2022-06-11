@@ -1,3 +1,4 @@
+import { NotificationService } from './../../../../services/notification/notification.service';
 import { ControlItem } from './../../../../models/frontend/control-item/index';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -18,7 +19,8 @@ export class SharedComponent implements OnInit {
   showSpinner = false;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private notification: NotificationService
   ) { }
 
   ngOnInit(): void {
@@ -112,10 +114,10 @@ export class SharedComponent implements OnInit {
   }
 
   onError(): void {
-
+    this.notification.error("Oops! Something went wrong");
   }
 
   onSuccess(): void {
-
+    this.notification.success("Everything is fine!");
   }
 }

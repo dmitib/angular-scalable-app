@@ -22,6 +22,9 @@ const APP_DATE_FORMATS: MatDateFormats = {
   }
 };
 
+// Services
+import { NotificationModule } from './services/notification/notification.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,8 @@ const APP_DATE_FORMATS: MatDateFormats = {
     AngularFirestoreModule,
     AngularFireAuthModule,
     BrowserAnimationsModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    NotificationModule.forRoot()
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: "en-GB" },
