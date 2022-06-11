@@ -104,4 +104,16 @@ export class SharedComponent implements OnInit {
       this.form.enable();
     }
   }
+
+  onToggleSpinner(): void {
+
+  }
+
+  onError(): void {
+
+  }
+
+  onSuccess(): void {
+
+  }
 }
