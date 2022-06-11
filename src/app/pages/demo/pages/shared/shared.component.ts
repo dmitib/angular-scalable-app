@@ -15,6 +15,8 @@ export class SharedComponent implements OnInit {
 
   items!: ControlItem[];
 
+  showSpinner = false;
+
   constructor(
     private fb: FormBuilder
   ) { }
@@ -106,7 +108,7 @@ export class SharedComponent implements OnInit {
   }
 
   onToggleSpinner(): void {
-
+    this.showSpinner = !this.showSpinner;
   }
 
   onError(): void {

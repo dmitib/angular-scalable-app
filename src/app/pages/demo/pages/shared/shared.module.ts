@@ -1,3 +1,4 @@
+import { IndicatorsModule } from './../../../../shared/indicators/indicators.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -17,7 +18,8 @@ import { ControlsModule, ButtonsModule } from '@app/shared';
     ButtonsModule,
     FormsModule,
     ReactiveFormsModule,
-    ControlsModule
+    ControlsModule,
+    IndicatorsModule
   ]
 })
 export class SharedModule { }
