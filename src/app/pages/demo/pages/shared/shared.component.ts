@@ -44,6 +44,10 @@ export class SharedComponent implements OnInit {
         updateOn: "blur",
         validators: [Validators.required]
       }],
+      autocomplete: [null, {
+        updateOn: "blur",
+        validators: [Validators.required]
+      }],
       select: [null, {
         updateOn: "change",
         validators: [Validators.required]

@@ -31,6 +31,15 @@
   </app-form-field>
 
   <app-form-field
+    label="Autocomplete"
+    [required]="true"
+    [control]="$any(form.controls).autocomplete"
+    [isInline]="isInline"
+  >
+    <app-autocomplete formControlName="autocomplete" [items]="items"></app-autocomplete>
+  </app-form-field>
+
+  <app-form-field
     label="Select"
     [required]="true"
     [control]="$any(form.controls).select"
