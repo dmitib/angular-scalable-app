@@ -68,3 +68,10 @@ Each component included in SharedModule must have its own module.
 Moving components to shared.
 The more distant the component is from the endpoint of use, the more abstract it should be.
 Avoid creating business logic components in shared.
+
+5.2
+Data Models Rules:
+- data models must be truthful 
+(database, component, view), without intersection with each other
+- data models must describe parts of an application, not abstract entities
+- 
