@@ -28,17 +28,17 @@ Keep in the root module minimum essential set of services and common components.
 4.2
 division into modules and elements groupuing
 
-- module
--- components
--- services
--- directives
--- pipes
--- guards
--- resolvers
--- models
--- store
--- pages
--- shared
+- module <br>
+-- components<br>
+-- services<br>
+-- directives<br>
+-- pipes<br>
+-- guards<br>
+-- resolvers<br>
+-- models<br>
+-- store<br>
+-- pages<br>
+-- shared<br>
 
 4.3
 when does a component become a module?
