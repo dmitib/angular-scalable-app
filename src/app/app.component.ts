@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+
+import { Store } from '@ngrx/store';
+import * as fromRoot from './store';
+import * as fromDictionaries from './store/dictionaries';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +13,10 @@ export class AppComponent implements OnInit {
   title = 'angular-scalable-app';
 
   constructor(
-    private afs: AngularFirestore
+    private store: Store<fromRoot.State>
   ) {}
 
   ngOnInit(): void {
-
+    this.store.dispatch(new fromDictionaries.Read());
   }
 }

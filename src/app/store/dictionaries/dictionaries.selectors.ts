@@ -21,20 +21,20 @@ export const getIsReady = createSelector(
 
 export const getRoles = createSelector(
   getDictionaries,
-  (state) => state.roles
+  (state) => state?.roles
 );
 
 export const getQualifications = createSelector(
   getDictionaries,
-  (state) => state.qualifications
+  (state) => state?.qualifications
 );
 
 export const getSkills = createSelector(
   getDictionaries,
-  (entities) => entities.skills
+  (entities) => entities?.skills
 );
 
 export const getSpecializations = createSelector(
   getDictionaries,
-  (entities) => entities.specializations
+  (entities) => entities?.specializations
 );

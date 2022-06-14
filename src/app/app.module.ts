@@ -25,6 +25,14 @@ const APP_DATE_FORMATS: MatDateFormats = {
 // Services
 import { NotificationModule } from './services/notification/notification.module';
 
+// Store
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers, effects } from './store/index';
+
+const StoreDevtools = !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 50 }) : [];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +47,15 @@ import { NotificationModule } from './services/notification/notification.module'
     AngularFireAuthModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
-    NotificationModule.forRoot()
+    NotificationModule.forRoot(),
+    StoreModule.forRoot(reducers, {
+        runtimeChecks: {
+          strictStateImmutability: true,
+          strictActionImmutability: true
+        }
+    }),
+    EffectsModule.forRoot(effects),
+    StoreDevtools
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: "en-GB" },
